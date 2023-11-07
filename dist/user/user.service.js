@@ -22,10 +22,13 @@ let UserService = class UserService {
         this.userRepository = userRepository;
     }
     async all() {
-        return await this.userRepository.find();
+        return this.userRepository.find();
     }
     async create(data) {
         return this.userRepository.save(data);
+    }
+    async findOne(condition) {
+        return this.userRepository.findOne(condition);
     }
 };
 exports.UserService = UserService;

@@ -8,7 +8,7 @@ export class User {
     @Column({ default: '' })
     first_name: string;
 
-    @Column()
+    @Column({ default: '' })
     last_name: string;
 
     @Column({unique: true})
@@ -17,6 +17,6 @@ export class User {
     @Column()
     password: string;
 
-    @Column()
+    @Column({ default: '' })
     gender: string;
 }
