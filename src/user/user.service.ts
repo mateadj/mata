@@ -18,6 +18,6 @@ export class UserService {
   }
 
   async findOne(condition): Promise<User> {
-    return this.userRepository.findOne(condition);
+    return this.userRepository.findOneBy(condition);
   }
 }

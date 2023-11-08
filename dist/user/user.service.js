@@ -28,7 +28,7 @@ let UserService = class UserService {
         return this.userRepository.save(data);
     }
     async findOne(condition) {
-        return this.userRepository.findOne(condition);
+        return this.userRepository.findOneBy(condition);
     }
 };
 exports.UserService = UserService;
